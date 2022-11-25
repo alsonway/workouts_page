@@ -25,7 +25,7 @@ from utils import make_activities_file_only
 # logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-TIME_OUT = httpx.Timeout(240.0, connect=360.0)
+TIME_OUT = httpx.Timeout(360.0, connect=480.0)
 GARMIN_COM_URL_DICT = {
     "BASE_URL": "https://connect.garmin.com",
     "SSO_URL_ORIGIN": "https://sso.garmin.com",
@@ -56,7 +56,7 @@ GET_ALL = True
 
 
 class Garmin:
-    def __init__(self, email, password, auth_domain, is_only_running=False):
+    def __init__(self, email, password, auth_domain, is_only_running= True):
         """
         Init module
         """
